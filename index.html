@@ -57,12 +57,12 @@
                     if (i < 3) {
                         console.log("notifi");
                         console.log(i);
-
+navigator.serviceWorker.register('sw.js');
                         if (!window.Notification) return;
 
                         Notification
                             .requestPermission()
-                            .then(showNotification)
+                            navigator.serviceWorker.ready.then(showNotification)
 
 
                         function showNotification(permission) {
